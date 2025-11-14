@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Promotions - PeopleOps</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<div class="wrapper">
+  <aside class="sidebar">
+    <div class="brand"><div class="logo">HR</div><div><h3>PeopleOps</h3><small>Promotions</small></div></div>
+    <nav class="nav">
+      <a href="index.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+      <a href="employees.html"><i class="fa-solid fa-users"></i> Employees</a>
+      <a href="attendance.html"><i class="fa-solid fa-calendar-check"></i> Attendance</a>
+      <a href="promotion.html" class="active"><i class="fa-solid fa-arrow-up-right-dots"></i> Promotions</a>
+    </nav>
+    <div class="sidebar-footer"><small>© 2025</small></div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar"><h1>Promotion History</h1></header>
+    <section class="content">
+      <div class="card">
+        <form id="proForm" class="form-row">
+          <input id="proName" placeholder="Employee Name" required>
+          <input id="proOld" placeholder="Old Role" required>
+          <input id="proNew" placeholder="New Role" required>
+          <input id="proDate" type="date" required>
+          <div class="form-actions"><button type="submit" class="btn"><i class="fa-solid fa-plus"></i> Add Promotion</button><button id="clearPro" type="button" class="btn ghost">Clear</button></div>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>Promotion Records</h3>
+        <input id="proSearch" placeholder="Search by name or role" style="width:100%;padding:10px;border-radius:8px;border:1px solid #eee;margin-bottom:12px">
+        <table class="table" id="proTable">
+          <thead><tr><th>Name</th><th>Old Role</th><th>New Role</th><th>Date</th><th>Actions</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</div>
+<script src="promotion.js"></script>
+</body>
+</html>

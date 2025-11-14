@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Employees - PeopleOps</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<div class="wrapper">
+  <aside class="sidebar">
+    <div class="brand"><div class="logo">HR</div><div><h3>PeopleOps</h3><small>Employees</small></div></div>
+    <nav class="nav">
+      <a href="index.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+      <a href="employees.html" class="active"><i class="fa-solid fa-users"></i> Employees</a>
+      <a href="attendance.html"><i class="fa-solid fa-calendar-check"></i> Attendance</a>
+      <a href="promotion.html"><i class="fa-solid fa-arrow-up-right-dots"></i> Promotions</a>
+    </nav>
+    <div class="sidebar-footer"><small>© 2025</small></div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar"><h1>Employees</h1></header>
+    <section class="content">
+      <div class="card">
+        <form id="empForm" class="form-row">
+          <input type="hidden" id="empId">
+          <input id="empName" placeholder="Full Name" required>
+          <input id="empEmail" placeholder="Email">
+          <input id="empDept" placeholder="Department">
+          <input id="empRole" placeholder="Role">
+          <input id="empSalary" placeholder="Salary" type="number">
+          <div class="form-actions"><button id="saveBtn" class="btn" type="submit"><i class="fa-solid fa-floppy-disk"></i> Save</button><button id="clearBtn" class="btn ghost" type="button"><i class="fa-solid fa-eraser"></i> Clear</button></div>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>Employee List</h3>
+        <input id="searchBox" placeholder="Search by name, role, dept" style="width:100%;padding:10px;border-radius:8px;border:1px solid #eee;margin-bottom:12px">
+        <table class="table" id="empTable">
+          <thead><tr><th>Name</th><th>Dept</th><th>Role</th><th>Salary</th><th>Actions</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</div>
+<script src="employees.js"></script>
+</body>
+</html>

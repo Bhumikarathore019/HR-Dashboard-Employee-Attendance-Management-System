@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>HR Dashboard - Tweaked UI</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<!-- FontAwesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+<div class="wrapper">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">HR</div>
+      <div><h3>PeopleOps</h3><small>Dashboard</small></div>
+    </div>
+
+    <nav class="nav">
+      <a href="index.html" class="active"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+      <a href="employees.html"><i class="fa-solid fa-users"></i> Employees</a>
+      <a href="attendance.html"><i class="fa-solid fa-calendar-check"></i> Attendance</a>
+      <a href="promotion.html"><i class="fa-solid fa-arrow-up-right-dots"></i> Promotions</a>
+      <a href="#"><i class="fa-solid fa-file-lines"></i> Reports</a>
+      <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+    </nav>
+
+    <div class="sidebar-footer"><small>© 2025 PeopleOps</small></div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h1>Dashboard</h1>
+        <p class="muted">Employee Management</p>
+      </div>
+      <div class="profile">
+        <div class="hello">Hello Taruk!</div>
+        <img class="avatar" src="avatar.png" alt="avatar">
+      </div>
+    </header>
+
+    <section class="content">
+      <div class="cards">
+        <div class="card gradient"><small>Total Employees</small><h2 id="totalEmployees">0</h2><div class="card-foot">Active</div></div>
+        <div class="card"><small>New Joinees (30d)</small><h2 id="newJoins">0</h2><div class="card-foot">Last 30 days</div></div>
+        <div class="card"><small>Resigned</small><h2 id="resigned">0</h2><div class="card-foot">This year</div></div>
+        <div class="card"><small>Avg Attendance (30d)</small><h2 id="avgAttendance">0%</h2><div class="card-foot">Presence</div></div>
+      </div>
+
+      <div class="grid">
+        <div class="panel">
+          <div class="panel-head"><h3>Job Applications (Monthly)</h3></div>
+          <div class="panel-body"><canvas id="applicationsChart"></canvas></div>
+        </div>
+
+        <div class="side-panels">
+          <div class="panel small"><h4>Employee Composition</h4><canvas id="compositionChart"></canvas></div>
+          <div class="panel small"><h4>Promotions (YTD)</h4><canvas id="promotionsChart"></canvas></div>
+        </div>
+
+        <div class="panel full"><h3>Attendance Trend (30 days)</h3><canvas id="attendanceChart"></canvas></div>
+
+        <div class="panel"><h3>Recent Joinees</h3><ul id="recentList" class="list"></ul></div>
+
+        <div class="panel"><h3>Today - Attendance Sample</h3><table class="table" id="todayTable"><thead><tr><th>Name</th><th>Dept</th><th>Status</th></tr></thead><tbody></tbody></table></div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script src="data.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>

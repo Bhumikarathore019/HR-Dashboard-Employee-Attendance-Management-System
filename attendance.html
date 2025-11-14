@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Attendance - PeopleOps</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<div class="wrapper">
+  <aside class="sidebar">
+    <div class="brand"><div class="logo">HR</div><div><h3>PeopleOps</h3><small>Attendance</small></div></div>
+    <nav class="nav">
+      <a href="index.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+      <a href="employees.html"><i class="fa-solid fa-users"></i> Employees</a>
+      <a href="attendance.html" class="active"><i class="fa-solid fa-calendar-check"></i> Attendance</a>
+      <a href="promotion.html"><i class="fa-solid fa-arrow-up-right-dots"></i> Promotions</a>
+    </nav>
+    <div class="sidebar-footer"><small>© 2025</small></div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar"><h1>Attendance</h1></header>
+    <section class="content">
+      <div class="card">
+        <form id="attForm" class="form-row">
+          <input id="attName" placeholder="Employee Name" required>
+          <input id="attDate" type="date" required>
+          <select id="attStatus"><option>Present</option><option>Absent</option><option>Late</option></select>
+          <div class="form-actions"><button type="submit" class="btn"><i class="fa-solid fa-check"></i> Mark</button><button id="clearAtt" type="button" class="btn ghost">Clear</button></div>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>Attendance Records</h3>
+        <input id="attSearch" placeholder="Filter by name or date" style="width:100%;padding:10px;border-radius:8px;border:1px solid #eee;margin-bottom:12px">
+        <table class="table" id="attTable">
+          <thead><tr><th>Name</th><th>Date</th><th>Status</th><th>Actions</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</div>
+<script src="attendance.js"></script>
+</body>
+</html>
